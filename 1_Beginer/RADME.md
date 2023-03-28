@@ -1,1 +1,1 @@
-http://cppstudio.com/cat/285/286/
+[Задачи с сайта](http://cppstudio.com/cat/285/286/)
