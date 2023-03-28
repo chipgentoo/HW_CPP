@@ -5,9 +5,7 @@ using namespace std;
 
 int input_int(string description)
 {
-    string str;
-    cout << description;
-    cin >> str;
+    string str; cout << description; cin >> str;
     int res;
     try
     {
