@@ -14,5 +14,5 @@ main(){
     std::cout << "Введите размер скидки в %: ";
     std::cin >> discount;
 
-    std::cout << "Полная стоимость товара: " << ((costGood + costDelivery) / 100) * discount;
+    std::cout << "Полная стоимость товара: " << (double)((costGood + costDelivery) / 100) * discount;
 }
