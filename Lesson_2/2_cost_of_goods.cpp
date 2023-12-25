@@ -1,9 +1,10 @@
 #include <iostream>
 
 main(){
-    int costGood;
-    int costDelivery;
-    int discount;
+    double costGood;
+    double costDelivery;
+    double discount;
+    double costFull;
 
     std::cout << "Введите стоимость товара: ";
     std::cin >> costGood;
@@ -14,5 +15,5 @@ main(){
     std::cout << "Введите размер скидки в %: ";
     std::cin >> discount;
 
-    std::cout << "Полная стоимость товара: " << (double)((costGood + costDelivery) / 100) * discount;
+    std::cout << "Полная стоимость товара: " << (costGood + costDelivery) - ((costGood + costDelivery) / 100) * discount << "\n";
 }
