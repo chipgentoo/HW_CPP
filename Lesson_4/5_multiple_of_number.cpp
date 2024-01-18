@@ -13,14 +13,33 @@ int main()
     std::cout << "Введите второе число:";
     std::cin >> twoNumber;
 
-    if (oneNumber % twoNumber == 0)
+    if (oneNumber < 0)
     {
-        std::cout << "Да, " << oneNumber << " делится на " << twoNumber << " без остатка!";
+        oneNumber = -oneNumber;
+    }
+    if (twoNumber < 0)
+    {
+        twoNumber = -twoNumber;
+    }
+    
+    if (twoNumber != 0)
+    {
+        if (oneNumber % twoNumber == 0)
+        {
+            std::cout << "Да, " << oneNumber << " делится на " << twoNumber << " без остатка!";
+        }
+        else
+        {
+            std::cout << "Нет, " << oneNumber << " не делится на " << twoNumber << " без остатка!";
+        }
+
     }
     else
     {
-        std::cout << "Нет, " << oneNumber << " не делится на " << twoNumber << " без остатка!";
+        std::cout << "На ноль делить нельзя!!!";
     }
+    
+
 
     return 0;
 }
