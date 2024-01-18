@@ -50,7 +50,7 @@ int main()
         countPeople += inPeople; // входим
         mony = mony + (fare * inPeople); // деньги = деньги + плата за проезд с каждого вошедшего.
 
-        if (i = countStopBus)
+        if (i == countStopBus)
         {
             std::cout << "===== Конец маршрута =====\n\n";
         }
