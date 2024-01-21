@@ -14,7 +14,7 @@ int main()
 {
     int x, y;
 
-    std::cout << "Введите координаты x y";
+    std::cout << "Введите координаты x y: ";
     std::cin >> x >> y;
 
     if (x == 0 && y == 0)
