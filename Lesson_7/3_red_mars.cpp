@@ -3,8 +3,20 @@
 int main()
 {
     // размеры комнаты
-    int roomLenght = 20;
-    int roomWidth = 15;
+    int roomLenght = 0;
+    int roomWidth = 0;
+
+    std::cout << "Введите размеры комнаты для теста марсохода (x y): ";
+    std::cin >> roomLenght >> roomWidth;
+
+    // для возможности движения минимальные размеры комнаты 2х2
+    // 0,0 0,1
+    // 1,0 1,1
+    if (roomLenght < 1 || roomWidth < 1)
+    {
+        std::cout << "Не приемлемые размеры комнаты.\n Минимально допустимые размеры 2х2\n";
+        return 0; // выход
+    }
 
     // центр комнаты ( начальные координаты марсохода)
     int marsX = roomLenght / 2;
@@ -40,6 +52,9 @@ int main()
         
         case 'x': // Выход
             return 0;
+
+        default :
+            std::cout << "Ошибка! Нажата НЕ клавиша управления.\n";
         }
     }
     return 0;
