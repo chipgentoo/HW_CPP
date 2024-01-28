@@ -29,18 +29,25 @@ int main()
 
     while (true)
     {
-        std::cout << "Выберите напиток: (1 - Американо, 2 - Латте): ";
+        std::cout << "Выберите напиток: (1 - Американо, 2 - Латте, 0 - Выход): ";
         std::cin >> userSelection;
 
         switch (userSelection)
         {
+        case 0:
+            return 0;
+
         case 1:
-            if (water >= waterAmericano )
-            {
+            if (water >= waterAmericano ) {
                 std::cout << "Ваш напиток готов.\n";
                 water -= waterAmericano;
                 countCupAmericano++;
             }
+            else if (water >= waterLatte && milk >= milkLatte)
+            {
+                std::cout << "На Американо не хватает воды. Может Латте?\n";
+            }
+            
             break;
 
         case 2:
@@ -51,14 +58,18 @@ int main()
                 milk -= milkLatte;
                 countCupLatte++;
             }
+            else
+            {
+                std::cout << "Не хватает ингридиентов.\n";
+            }
             break;
 
         default:
-            std::cout << "Такого напитка нет рецептах кофемашины!";
+            std::cout << "Такого напитка нет рецептах кофемашины!\n";
             break;
         }
 
-        if ((water < waterLatte || milk < milkLatte) || (water < waterAmericano))
+        if(water < waterLatte || milk < milkLatte)
         {
             std::cout << "**** ОТЧЁТ ****\n\n";
             std::cout << "Ингридиентов осталось:";
