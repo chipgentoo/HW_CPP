@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int main()
 {
@@ -21,14 +22,15 @@ int main()
     }
     
     // выщитываем средний темп
-    int temp = 0;
+    float temp = 0;
     for (int i = 0; i < kilometers; i++)
     {
         temp += speed[i];
     }
     temp /= kilometers;
 
-    std::cout << "Твой средний темп за тренировку: " << temp / 60 << " мин. " << temp - (temp / 60) * 60 << " сек.\n";
+    std::cout << "Твой средний темп за тренировку: " << (int)(temp / 60) << " мин. " << ceil(temp - floor(temp / 60) * 60) << " сек.\n";
 
     return 0;
-}
+    
+    }
