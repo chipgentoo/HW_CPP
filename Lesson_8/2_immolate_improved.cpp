@@ -34,7 +34,7 @@ int main()
         //     fireBall = 0.f;
         // }
         
-        // леньво набивать шары руками
+        // лениво набивать шары руками
         fireBall = (float)(rand()) / (float)(RAND_MAX);
 
         std::cout << "В орка прилетел шар мощностью: " << fireBall << "\n";
