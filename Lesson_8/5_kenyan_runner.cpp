@@ -29,8 +29,8 @@ int main()
     }
     temp /= kilometers;
 
-    std::cout << "Твой средний темп за тренировку: " << (int)(temp / 60) << " мин. " << ceil(temp - floor(temp / 60) * 60) << " сек.\n";
-
+    std::cout << "Твой средний темп за тренировку: " << floor(temp / 60) << " мин. " << ceil(temp - floor(temp / 60) * 60) << " сек.\n";
+                                                     // (int)(temp / 60) << " мин. " << (int)temp - (int)(temp / 60) * 60) - шыло на мыло
     return 0;
     
     }
