@@ -3,12 +3,12 @@
 
 std::vector<int> remove_firts(std::vector<int> vec)
 {
-    std::vector<int> vecTemp(vec.size()-1);
-    for (int i = 0; i < vecTemp.size(); i++)
-    {
-        vecTemp[i] = vec[i]; // смещаем значения влево: 0 <- 1; 1 <- 2; 2 <- 3 и т.д.
+    int size = vec.size();
+    std::vector<int> vecTemp(size);
+    for (int i = 0; i < size - 1; i++)
+    {   // смещаем значения влево: 0 <- 1; 1 <- 2; 2 <- 3 и т.д.
+        vecTemp[i] = vec[i+1];
     }
-    vecTemp.resize(1);
     return vecTemp;
 }
 
