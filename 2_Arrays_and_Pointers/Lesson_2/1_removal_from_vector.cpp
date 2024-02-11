@@ -35,7 +35,6 @@ int main()
         {
             resVector.push_back(intVector[i]);
         }
-        continue;
     }
 
     // вывод результирующего вектора
