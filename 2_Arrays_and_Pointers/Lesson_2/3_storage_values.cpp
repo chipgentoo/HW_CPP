@@ -1,15 +1,15 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> remove_firts(std::vector<int> vec)
+std::vector<int> remove_firts(std::vector<int> oldVector)
 {
-    int size = vec.size();
-    std::vector<int> vecTemp(size);
+    int size = oldVector.size();
+    std::vector<int> newVector(size);
     for (int i = 0; i < size - 1; i++)
     {   // смещаем значения влево: 0 <- 1; 1 <- 2; 2 <- 3 и т.д.
-        vecTemp[i] = vec[i+1];
+        newVector[i] = oldVector[i+1];
     }
-    return vecTemp;
+    return newVector;
 }
 
 int main()
